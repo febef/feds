@@ -1,0 +1,39 @@
+{
+  "name": "feds",
+  "preferGlobal": "true",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=0.12"
+  },
+  "description": "Minimal front-end developer derver",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+  "feds": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/febef/feds.git"
+  },
+  "keywords": [
+    "front-end",
+    "developer",
+    "server",
+    "livereload"
+  ],
+  "author": "Facundo E. Beltramo <fexbef@gmail.com> (https://febef.github.io)",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/febef/feds/issues"
+  },
+  "homepage": "https://github.com/febef/feds",
+  "dependencies": {
+    "connect-livereload": "^0.5.3",
+    "express": "^4.12.3",
+    "gulp": "^3.8.11",
+    "gulp-chug": "^0.4.2",
+    "tiny-lr": "^0.1.5"
+  }
+}
