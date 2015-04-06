@@ -1,17 +1,17 @@
 {
   "name": "feds",
   "preferGlobal": "true",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "engines": {
     "node": ">=0.12"
   },
-  "description": "Minimal front-end developer derver",
+  "description": "Minimal front-end developer server",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-  "feds": "./index.js"
+    "feds": "./index.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/febef/feds",
   "dependencies": {
+    "colors": "^1.0.3",
     "connect-livereload": "^0.5.3",
     "express": "^4.12.3",
     "gulp": "^3.8.11",
