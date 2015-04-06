@@ -1,7 +1,7 @@
 {
   "name": "feds",
   "preferGlobal": "true",
-  "version": "0.1.0",
+  "version": "0.1.51",
   "engines": {
     "node": ">=0.12"
   },
@@ -31,6 +31,7 @@
   "homepage": "https://github.com/febef/feds",
   "dependencies": {
     "colors": "^1.0.3",
+    "connect": "^3.3.5",
     "connect-livereload": "^0.5.3",
     "express": "^4.12.3",
     "gulp": "^3.8.11",

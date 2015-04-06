@@ -4,6 +4,7 @@
 
 var
    gulp    = require('gulp'),
+   connect = require('connect'),
    express = require('express'),
    path    = require('path'),
    colors  = require('colors'),
@@ -16,8 +17,6 @@ var say = function(text, color) {
    console.log("+[".gray + "feds".blue + "]".gray +
                "  " + (text)[color || 'gray'] );
 };
-
-say("Configurin gulp...");
 
 gulp.task('express', function() {
    app.use(require('connect-livereload')({port: 9002}));
@@ -36,24 +35,18 @@ gulp.task('livereload', function() {
 
 function notifyLiveReload(event) {
    var fileName = path.relative(cwd, event.path);
-   say("Reload » " + fileName, 'blue');
+   say("Reload » ".blue + (fileName).green);
    for(var i =0; i< 100000;i++);
    tinylr.changed({
       body: {
          files: [fileName]
       }
    });
-   say("waiting for changes...", 'magenta');
 }
 
 gulp.task('watch', function() {
-   gulp.watch(cwd + '/*.html', notifyLiveReload);
-   gulp.watch(cwd + '/*.*', notifyLiveReload);
-   gulp.watch(cwd + '/**/*.js', notifyLiveReload);
-   gulp.watch(cwd + '/**/*.css', notifyLiveReload);
-
+   gulp.watch(cwd + '/**/*.*', notifyLiveReload);
    say("Watching files in: '" + cwd + "'.");
-   say("waiting for changes...", 'magenta');
 });
 
 gulp.task('feds', ['livereload', 'express', 'watch']);
