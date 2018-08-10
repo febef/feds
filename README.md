@@ -1,4 +1,4 @@
-# feds
+# feds DPRECATED
 Minimal front-end developer server.
 
 ## install
